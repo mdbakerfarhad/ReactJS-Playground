@@ -24,6 +24,11 @@ export default function TextForm(props) {
     setText(newText);
   };
 
+  const handleRedoClick = () => {
+    // console.log("UpperCase was clicked" + text);
+    let newText = "";
+    setText(newText);
+  };
 
 
   const handleOnChange = (event) => {
@@ -56,6 +61,9 @@ export default function TextForm(props) {
         </button>
         <button className="btn btn-primary mx-2" onClick={handleCopyClick}>
           Copy Text
+        </button>
+        <button className="btn btn-primary mx-2" onClick={handleRedoClick}>
+          Redo
         </button>
       </div>
       <div className="container my-3" style={{color: props.mode==='dark'?'white':'#042743'}}>
